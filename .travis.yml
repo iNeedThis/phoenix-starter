@@ -17,4 +17,4 @@ addons:
 services:
   - postgresql
 before_script:
-  - mix do ecto.create, ecto.migrate
+  - mix ecto.create, ecto.migrate
