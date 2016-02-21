@@ -17,8 +17,8 @@ A boilerplate for **Phoenix Framework** web applications. Inspired by [Sahat's H
 
 My primary focus is on **simplicity** and **ease of use**. It will try to be as
 **generic** and **reusable** as possible to cover most use cases of starter web apps. A SaaS solution
-For a feature should be considered higher priority instead of writing your own solution (i.e. Clouds art
-For Image Uploads. In the worst case you can use this as a learning guide for your projects,
+For a feature should be considered higher priority before writing your own solution (i.e. Cloudinary
+for Avatar Uploads). In the worst case you can use this as a learning guide for your projects,
 if for example you are only interested in **Sign in with Github** authentication and nothing else.
 
 ![](https://raw.githubusercontent.com/mjcloutier/mjcloutier.github.io/master/phoenix-starter-home.png)
