@@ -1,0 +1,28 @@
+<div class="jumbotron">
+  <h2>Phoenix Starter</h2>
+  <p class="lead">A kickstarter for the Phoenix Framework.</p>
+</div>
+
+<div class="row marketing">
+  <div class="col-lg-6">
+    <h4>Resources</h4>
+
+    <ul class="list-unstyled">
+      <li><a href="http://github.com/ueberauth/guardian">Guardian</a></li>
+      <li><a href="http://github.com/ueberauth/ueberauth">Überauth</a></li>
+      <li><a href="http://elixirstatus.com/">ElixirStatus</a></li>
+      <li><a href="https://github.com/h4cc/awesome-elixir">Awesome Elixir</a></li>
+    </ul>
+  </div>
+
+  <div class="col-lg-6">
+    <h4>Help</h4>
+
+    <ul class="list-unstyled">
+      <li><a href='http://elixir-slackin.herokuapp.com/'>Elixir Slack</a></li>
+      <li><a href="http://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on freenode IRC</a></li>
+      <li><a href="https://gitter.im/iNeedThis/phoenix-starter">Gitter Chat</a></li>
+      <li><a href="http://elixirforum.com/">Elixir Forum</a></li>
+    </ul>
+  </div>
+</div>

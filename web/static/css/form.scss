@@ -1,0 +1,43 @@
+@import "_config";
+
+input#user_twitter_handle, input.post-title, textarea.post-body {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  outline: none;
+  width: 100%;
+  background: #fafafa;
+  padding: 1rem;
+
+  &:focus { background: transparent; }
+}
+
+label[for=user_twitter_handle] {
+  display: block;
+  margin-top: 1em;
+}
+
+input#user_twitter_handle {
+  font-size: 1.15em;
+  margin-bottom: 1em;
+}
+
+.search { text-align: center; }
+
+.search input[type="text"] {
+  display: block;
+  font-size: 1em;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  margin: 25px 0;
+  width: 100%;
+}
+
+textarea.post-body {
+  font-family: inherit;
+  font-size: inherit;
+  min-height: 200px;
+  margin-top: 25px;
+}
+
+form input.error, form textarea.error { border: 2px solid #faa; }

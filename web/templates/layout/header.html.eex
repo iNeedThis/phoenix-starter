@@ -1,0 +1,16 @@
+<div class="header">
+  <div class="btn-group pull-right" role="group" aria-label="Header Navigation">
+    <%= if @current_user do %>
+      <%= if @conn.request_path != auth_path(@conn, :login, "identity") do %>
+        <%= button "Connect", to: auth_path(@conn, :login, "identity"), method: "get", class: "btn btn-sm btn-success-outline" %>
+      <% end %>
+
+      <%= button "Logout", to: auth_path(@conn, :logout), method: "delete", class: "btn btn-sm btn-danger-outline" %>
+    <% else %>
+      <%= if @conn.request_path != auth_path(@conn, :login, "identity") do %>
+        <%= link "Login", to: auth_path(@conn, :login, "identity"), class: "btn btn-sm btn-primary-outline"%>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="clearfix"></div>
+</div>

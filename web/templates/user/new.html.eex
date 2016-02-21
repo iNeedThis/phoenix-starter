@@ -1,0 +1,30 @@
+<div class="container text-center">
+	<%= form_tag auth_path(@conn, :callback, "identity"), [method: "POST", novalidate: true, class: "form-auth sign-up-form"] do %>
+  	<h2 class="form-auth-heading">Sign Up</h2>
+
+		<small class="text-muted">Connect with a Social Network</small>
+
+		<br><br>
+
+		<p>
+			<a class="btn btn-primary social-login-btn social-facebook" href="/auth/facebook"><i class="fa fa-facebook"></i></a>
+			<a class="btn btn-primary social-login-btn social-twitter" href="/auth/twitter"><i class="fa fa-twitter"></i></a>
+		</p>
+
+		<p>
+			<a class="btn btn-primary social-login-btn social-github" href="/auth/github"><i class="fa fa-github-alt"></i></a>
+			<a class="btn btn-primary social-login-btn social-google" href="/auth/google"><i class="fa fa-google-plus"></i></a>
+		</p>
+
+    <small class="text-muted">or the retro way.</small>
+
+    <br><br>
+
+		<input type='email' name='email' required class='form-control login-input' placeholder="Email"/>
+		<input name='name' required class='form-control login-input' placeholder="Full Name"/>
+		<input type='password' name='password' required class='form-control login-input' placeholder='Password'/>
+		<input type='password' name='password_confirmation' required class='form-control login-input-pass' placeholder='Password Confirmation'/>
+
+		<button class="btn btn-danger btn-block" type="submit">Create Account</button>
+	<% end %>
+</div>

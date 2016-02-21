@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= html_title(assigns) %></title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= PhoenixStarter.Meta.html_description %>">
+    <meta name="author" content="">
+    <meta property="og:image" content="<%= og_image_url(assigns) %>" />
+
+    <%= if Guardian.Plug.current_token(@conn) do %>
+      <meta name="guardian_token" content="<%= Guardian.Plug.current_token(@conn) %>">
+    <% end %>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/css/tether.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-xWeRKjzyg6bep9D1AsHzUPEWHbWMzlRc84Z0aG+tyms= sha512-mGIRU0bcPaVjr7BceESkC37zD6sEccxE+RJyQABbbKNe83Y68+PyPM5nrE1zvbQZkSHDCJEtnAcodbhlq2/EkQ==" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="<%= static_path(@conn, "/css/app.css") %>" rel="stylesheet">
+  </head>
+
+  <body>
+    <%= render PhoenixStarter.SharedView, "sidebar.html", conn: @conn, current_user: @current_user %>
+
+    <div class="content">
+      <div class="container">
+        <%= render "impersonation.html", conn: @conn %>
+        <%= render "header.html", conn: @conn, current_user: @current_user %>
+        <%= render "flash.html", conn: @conn %>
+
+        <%= render @view_module, @view_template, assigns %>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+
+    <!--[if lt IE 9]>
+      <script>
+        (function(){
+          var ef = function(){};
+          window.console = window.console || {log:ef,warn:ef,error:ef,dir:ef};
+        }());
+      </script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/3.4.0/es5-shim.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/3.4.0/es5-sham.js"></script>
+    <![endif]-->
+
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+
+    <%= case Mix.env do %>
+      <% :prod -> %>
+        <%= render PhoenixStarter.SharedView, "tracking_prod.html" %>
+      <% :stag -> %>
+        <%= render PhoenixStarter.SharedView, "tracking_stag.html" %>
+      <% :dev -> %>
+      <% :test -> %>
+    <% end %>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+<h2>What is PhoenixStarter?</h2>
+
+<p>PhoenixStarter is a site <a href="https://github.com/iNeedThis/phoenix-starter/network/members">built by the community</a> to provide <strong><em>a boilerplate for Phoenix Framework web applications.</em></strong></p>
+
+<p>If you have attended any hackathons in the past, then you know how much time it takes to get a project started: decide on what to build, pick a programming language, pick a web framework, pick a CSS framework. A while later, you might have an initial project up on GitHub and only then can other team members start contributing. Or how about doing something as simple as Sign in with Facebook authentication? You can spend hours on it if you are not familiar with how OAuth 2.0 works.</p>
+
+<p>My primary focus is on simplicity and ease of use. It will try to be as generic and reusable as possible to cover most use cases of hackathon web apps, without being too specific. In the worst case you can use this as a learning guide for your projects, if for example you are only interested in Sign in with Github authentication and nothing else.</p>
+
+<p>The idea is to have something akin to what <a href="https://github.com/sahat/hackathon-starter">Sahat's Hackathon Starter</a> is for Node.js, but bringing the Elixir community's ideas to the table.</p>
+
+<p>PhoenixStarter is a web app written in <strong><em>Elixir+Phoenix running in production</em></strong>.</p>
+
+<p>Together with sites like <a href="http://jobs.elixirdose.com/">Elixir Jobs</a> it is <strong><em>intended to serve as a case study</em></strong> for the community, so <strong><em>you can point your boss to these sites</em></strong> if he or she wants to see "proof" that this "Elixir thing" is actually a viable alternative to Ruby/Python/Node when building the next web project.</p>

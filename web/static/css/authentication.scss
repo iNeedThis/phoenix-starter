@@ -1,0 +1,131 @@
+@import url(http://weloveiconfonts.com/api/?family=brandico|entypo|openwebicons|zocial);
+
+/* brandico */
+[class*="brandico-"]:before { font-family: 'brandico', sans-serif; }
+
+/* entypo */
+[class*="entypo-"]:before { font-family: 'entypo', sans-serif; }
+
+/* openwebicons */
+[class*="openwebicons-"]:before { font-family: 'OpenWeb Icons', sans-serif; }
+
+/* zocial */
+[class*="zocial-"]:before { font-family: 'zocial', sans-serif; }
+
+.form-auth{
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+
+  h2 {
+    font-size: 1.75rem;
+    margin-top: 0;
+  }
+
+  .forgot-password-link {
+    float: left;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+}
+
+.sign-up-form {
+  margin-top: -35px;
+}
+
+.login-input {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.login-input-pass {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.signup-input {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.signup-input-confirm {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.create-account {
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.form-auth .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.btn-center{
+  width: 50%;
+  text-align: center;
+  margin: inherit;
+}
+
+.social-login-btn {
+  margin: 5px;
+  width: 20%;
+  font-size: 250%;
+  padding: 0;
+}
+
+.social-login-more {
+  width: 45%;
+}
+
+.social-google {
+  background-color: #da573b;
+  border-color: #be5238;
+}
+
+.social-google:hover{
+  background-color: #be5238;
+  border-color: #9b4631;
+}
+
+.social-twitter {
+  background-color: #1daee3;
+  border-color: #3997ba;
+}
+
+.social-twitter:hover {
+  background-color: #3997ba;
+  border-color: #347b95;
+}
+
+.social-facebook {
+  background-color: #4c699e;
+  border-color: #47618d;
+}
+
+.social-facebook:hover {
+  background-color: #47618d;
+  border-color: #3c5173;
+}
+
+.social-github {
+  background-color: #4875B4;
+  border-color: #466b99;
+}
+
+.social-github:hover {
+  background-color: #466b99;
+  border-color: #3b5a7c;
+}

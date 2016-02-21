@@ -1,0 +1,56 @@
+<div class="container text-center">
+  <%= form_tag auth_path(@conn, :callback, "identity"), [method: "POST", novalidate: true, class: "login form-auth"] do %>
+  	<h2 class="form-auth-heading">
+      <%= if @current_user do %>
+        <%= gettext "Authorizations" %>
+      <% else %>
+        <%= gettext "Login" %>
+      <% end %>
+    </h2>
+
+		<small class="text-muted">Connect with a Social Network</small>
+		<br><br>
+
+
+		<p>
+      <%= if not Enum.member?(@current_auths, "facebook") do %>
+			  <a class="btn btn-primary social-login-btn social-facebook" href="<%= auth_path(@conn, :login, "facebook") %>"><i class="fa fa-facebook"></i></a>
+      <% end %>
+
+      <%= if not Enum.member?(@current_auths, "slack") do %>
+			  <a class="btn btn-primary social-login-btn social-slack" href="<%= auth_path(@conn, :login, "slack") %>"><i class="fa fa-slack"></i></a>
+      <% end %>
+		</p>
+
+		<p>
+      <%= if not Enum.member?(@current_auths, "github") do %>
+			  <a class="btn btn-primary social-login-btn social-github" href="<%= auth_path(@conn, :login, "github") %>"><i class="fa fa-github-alt"></i></a>
+      <%= end %>
+
+      <%= if not Enum.member?(@current_auths, "google") do %>
+			  <a class="btn btn-primary social-login-btn social-google" href="<%= auth_path(@conn, :login, "google") %>"><i class="fa fa-google-plus"></i></a>
+      <% end %>
+		</p>
+
+    <%= if not Enum.member?(@current_auths, "identity") do %>
+      <small class="text-muted">or the retro way.</small>
+
+      <br><br>
+
+      <input type='email' name='email' class='form-control login-input' value='<%= @conn.params["email"] %>' required placeholder="Email" autofocus/>
+  		<input type='password' name='password' required class='form-control login-input-pass' placeholder='Password'/>
+
+      <a href="/" class="forgot-password-link">Forgot your password?</a>
+
+  		<button class="btn btn-danger btn-block" type="submit">Login</button>
+
+      <br>
+
+      <small class="create-account text-muted">New to Phoenix Starter?</small>
+
+      <br>
+
+      <a href="<%= user_path(@conn, :new)%>" class="btn btn-warning-outline btn-block btn-center"> Sign Up </a>
+    <% end %>
+  <% end %>
+</div>

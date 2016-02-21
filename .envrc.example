@@ -1,0 +1,24 @@
+export PROD_HOST="phoenixstarter-production.herokuapp.com"
+export STAG_HOST="phoenixstarter-staging.herokuapp.com"
+
+export GITHUB_CLIENT_ID=""
+export GITHUB_CLIENT_SECRET=""
+
+export SLACK_CLIENT_ID=""
+export SLACK_CLIENT_SECRET=""
+
+export GOOGLE_CLIENT_ID=""
+export GOOGLE_CLIENT_SECRET=""
+
+export FACEBOOK_CLIENT_ID=""
+export FACEBOOK_CLIENT_SECRET=""
+
+export DEV_DB_USERNAME="postgres"
+export DEV_DB_PASSWORD="postgres"
+export DEV_DB_NAME="phoenix_starter_dev"
+
+export DATABASE_URL=""
+
+export TEST_DB_USERNAME="postgres"
+export TEST_DB_PASSWORD="postgres"
+export TEST_DB_NAME="phoenix_starter_test"

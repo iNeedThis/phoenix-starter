@@ -1,0 +1,23 @@
+<div class="sidebar">
+  <div class="container">
+    <div class="sidebar-header">
+      <h1><a href="/">PhoenixStarter</a></h1>
+      <p><%= gettext "Start your next Phoenix Application like a Boss." %></p>
+    </div>
+  </div>
+
+  <div class="container sidebar-nav-container">
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item <%= active_on_current(@conn, "/") %>" href="/"><%= gettext "Home" %></a>
+      <a class="sidebar-nav-item <%= active_on_current(@conn, page_path(@conn, :about)) %>" href="<%= page_path(@conn, :about) %>"><%= gettext "About" %></a>
+      <a class="sidebar-nav-item <%= active_on_current(@conn, page_path(@conn, :channels)) %>" href="<%= page_path(@conn, :channels) %>"><%= gettext "Channels" %></a>
+      <a class="sidebar-nav-item <%= active_on_current(@conn, token_path(@conn, :index)) %>" href="<%= token_path(@conn, :index) %>"><%= gettext "Tokens" %></a>
+      <a class="sidebar-nav-item <%= active_on_current(@conn, private_page_path(@conn, :index)) %>" href="<%= private_page_path(@conn, :index) %>"><%= gettext "Private Page" %></a>
+      <a class="sidebar-nav-item <%= active_on_current(@conn, authorization_path(@conn, :index)) %>" href="<%= authorization_path(@conn, :index) %>"><%= gettext "Authorizations" %></a>
+    </nav>
+  </div>
+</div>

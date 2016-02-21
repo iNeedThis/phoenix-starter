@@ -1,0 +1,20 @@
+sudo: false
+language: elixir
+elixir:
+  - 1.2.0
+otp_release:
+  - 18.0
+env:
+  - MIX_ENV=test
+script:
+  - mix test --exclude expensive
+  - mix test --only expensive
+notifications:
+  email:
+    - viotech@comcast.net
+addons:
+  postgresql: "9.4"
+services:
+  - postgresql
+before_script:
+  - mix do ecto.create, ecto.migrate
