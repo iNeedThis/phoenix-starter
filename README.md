@@ -4,7 +4,7 @@ Phoenix Starter [![docs](http://inch-ci.org/github/iNeedThis/phoenix-starter.svg
 
 [![Gratipay User](https://img.shields.io/gratipay/user/~mjcloutier.svg)](https://gratipay.com/~mjcloutier/) [![Maintenance](https://img.shields.io/maintenance/yes/2016.svg)]() [![Join the chat at https://gitter.im/sahat/hackathon-starter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/iNeedThis/phoenix-starter?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-**Live Demo**: http://phoenixstarter.herokuapp.com
+**Live Demo**: <a href="http://phoenixstarter.herokuapp.com" target="_blank">http://phoenixstarter.herokuapp.com</a>
 
 A boilerplate for **Phoenix Framework** web applications. Inspired by [Sahat's Hackathon Starter](https://github.com/sahat/hackathon-starter)
 
