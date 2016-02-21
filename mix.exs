@@ -41,6 +41,8 @@ defmodule PhoenixStarter.Mixfile do
       :ueberauth_slack,
       :ueberauth_google,
       :ueberauth_facebook,
+      :ueberauth_twitter,
+      :ueberauth_fitbit,
       :gettext
     ]
   end
@@ -64,6 +66,9 @@ defmodule PhoenixStarter.Mixfile do
       {:ueberauth_slack, "~>0.2.0"},
       {:ueberauth_google, "~> 0.2"},
       {:ueberauth_facebook, "~> 0.3.2"},
+      {:ueberauth_twitter, "~> 0.2"},
+      {:ueberauth_fitbit, "~> 0.2"},
+      {:oauth, github: "tim/erlang-oauth"},
       {:comeonin, "~> 1.6"},
       {:cowboy, "~> 1.0"},
       {:gettext, "~> 0.9"}

@@ -18,6 +18,7 @@
   "jose": {:hex, :jose, "1.6.1"},
   "mimerl": {:hex, :mimerl, "1.0.2"},
   "mimetype_parser": {:hex, :mimetype_parser, "0.1.1"},
+  "oauth": {:git, "https://github.com/tim/erlang-oauth.git", "cd31addc828179983564fd57738f1680a4a4d1ff", []},
   "oauth2": {:hex, :oauth2, "0.5.0"},
   "phoenix": {:hex, :phoenix, "1.1.4"},
   "phoenix_ecto": {:hex, :phoenix_ecto, "2.0.1"},
@@ -31,8 +32,10 @@
   "ssl_verify_hostname": {:hex, :ssl_verify_hostname, "1.0.5"},
   "ueberauth": {:git, "https://github.com/ueberauth/ueberauth.git", "153199a6d6510bff271f4b8f71c44caea2f730ff", []},
   "ueberauth_facebook": {:hex, :ueberauth_facebook, "0.3.2"},
+  "ueberauth_fitbit": {:hex, :ueberauth_fitbit, "0.2.1"},
   "ueberauth_github": {:hex, :ueberauth_github, "0.2.0"},
   "ueberauth_google": {:hex, :ueberauth_google, "0.2.0"},
   "ueberauth_identity": {:hex, :ueberauth_identity, "0.2.2"},
   "ueberauth_slack": {:hex, :ueberauth_slack, "0.2.0"},
+  "ueberauth_twitter": {:hex, :ueberauth_twitter, "0.2.2"},
   "uuid": {:hex, :uuid, "1.1.3"}}

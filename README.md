@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/iNeedThis/phoenix-starter/master/web/static/assets/images/banner.png?token=ABlggrnb-TuGo65cugHm9xpizj2eBuucks5W0hxPwA%3D%3D)
+![](https://raw.githubusercontent.com/mjcloutier/mjcloutier.github.io/master/banner.png)
 Phoenix Starter [![docs](http://inch-ci.org/github/iNeedThis/phoenix-starter.svg?branch=master)](http://inch-ci.org/github/iNeedThis/phoenix-starter) [![Deps Status](http://hexfaktor.org/images/deps.svg)](http://hexfaktor.org/) [![Build Status](https://travis-ci.org/iNeedThis/phoenix-starter.svg?branch=master)](https://travis-ci.org/iNeedThis/phoenix-starter)
 =======================
 
@@ -61,29 +61,30 @@ Features
 - [x] CSRF protection.
 
 - [ ] **User Account Management**
- - [ ] Avatar Image Upload with (Gravatar/Identicon fallback).
-  - [ ] Delete Avatar.
-  - [ ] Edit Avatar.
- - [ ] Profile Details.
- - [ ] Change Password.
- - [ ] Password Confirmation.
- - [ ] Forgot Password.
- - [ ] Reset Password.
- - [x] Link multiple OAuth strategies to one account.
- - [ ] Delete strategies linked to an account.
- - [ ] Delete Account.
+  - [ ] Avatar Image Upload with (Gravatar/Identicon fallback).
+    - [ ] Uplaod Avatar via link or File Upload.
+    - [ ] Delete Avatar.
+    - [ ] Edit Avatar.
+  - [ ] Profile Details.
+  - [ ] Change Password.
+  - [ ] Password Confirmation.
+  - [ ] Forgot Password.
+  - [ ] Reset Password.
+  - [x] Link multiple OAuth strategies to one account.
+  - [ ] Delete strategies linked to an account.
+  - [ ] Delete Account.
 
 - [ ] **Admin Account Management**
- - [ ] Manage Users.
- - [ ] Manage Application Settings.
+  - [ ] Manage Users.
+  - [ ] Manage Application Settings.
 
 - [ ] **Mailers**
- - [ ] Reset Password.
- - [ ] Confirm Password.
- - [ ] Welcome.
- - [ ] Delete Account.
+  - [ ] Reset Password.
+  - [ ] Confirm Password.
+  - [ ] Welcome.
+  - [ ] Delete Account.
 
-- [ ] **Monitorin** with ExoMeter and DataDog
+- [ ] **Monitoring** with ExoMeter and DataDog
 
 
 Prerequisites

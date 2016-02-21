@@ -125,6 +125,30 @@ defmodule PhoenixStarter.UserFromAuth do
     end
   end
 
+  defp auth_and_validate(%{provider: :twitter} = auth, repo) do
+    case repo.get_by(Authorization, uid: uid_from_auth(auth), provider: to_string(auth.provider)) do
+      nil -> {:error, :not_found}
+      authorization ->
+        if authorization.uid == uid_from_auth(auth) do
+          authorization
+        else
+          {:error, :"Twitter uid mismatch"}
+        end
+    end
+  end
+
+  defp auth_and_validate(%{provider: :fitbit} = auth, repo) do
+    case repo.get_by(Authorization, uid: uid_from_auth(auth), provider: to_string(auth.provider)) do
+      nil -> {:error, :not_found}
+      authorization ->
+        if authorization.uid == uid_from_auth(auth) do
+          authorization
+        else
+          {:error, :"Fitbit uid mismatch"}
+        end
+    end
+  end
+
   defp auth_and_validate(auth, repo) do
     case repo.get_by(Authorization, uid: uid_from_auth(auth), provider: to_string(auth.provider)) do
       nil -> {:error, :not_found}
