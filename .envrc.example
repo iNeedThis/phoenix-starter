@@ -1,4 +1,4 @@
-export PROD_HOST="phoenixstarter-production.herokuapp.com"
+export PROD_HOST="phoenixstarter.herokuapp.com"
 export STAG_HOST="phoenixstarter-staging.herokuapp.com"
 
 export GITHUB_CLIENT_ID=""
