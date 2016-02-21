@@ -55,23 +55,37 @@ Table of Contents
 Features
 --------
 
-- [x] **Local Authentication** using Email and Password
-- [ ] **OAuth 1.0a Authentication** via Twitter
-- [x] **OAuth 2.0 Authentication** via Facebook, Google, GitHub, Slack
-- [x] Flash notifications
-- [x] MVC Project Structure
-- [x] Sass stylesheets (auto-compiled via Brunch)
-- [x] Bootstrap 4
-- [ ] Contact Form (powered by Mailgun, Sendgrid or Mandrill)
-- [ ] **Account Management**
- - [ ] Gravatar
- - [ ] Profile Details
- - [ ] Change Password
- - [ ] Forgot Password
- - [ ] Reset Password
- - [ ] Link multiple OAuth strategies to one account
- - [ ] Delete Account
-- [x] CSRF protection
+- [x] **Local Authentication** using Email and Password.
+- [x] **OAuth 2.0 Authentication** via Facebook, Google, GitHub, Slack.
+- [ ] **OAuth 1.0a Authentication** via Twitter.
+- [x] Flash notifications.
+- [x] MVC Project Structure.
+- [x] Sass stylesheets (auto-compiled via Brunch).
+- [x] Bootstrap 4.
+- [ ] Contact Form (powered by Mailgun, Sendgrid or Mandrill).
+- [x] CSRF protection.
+
+- [ ] **User Account Management**
+ - [ ] Avatar Image Upload with (Gravatar/Identicon fallback).
+  - [ ] Avatar Image Delete.
+ - [ ] Profile Details.
+ - [ ] Change Password.
+ - [ ] Password Confirmation.
+ - [ ] Forgot Password.
+ - [ ] Reset Password.
+ - [x] Link multiple OAuth strategies to one account.
+ - [ ] Delete strategies linked to an account.
+ - [ ] Delete Account.
+
+- [ ] **Admin Account Management**
+ - [ ] Manage Users.
+ - [ ] Manage Application Settings.
+
+- [ ] **Mailers**
+ - [ ] Reset Password.
+ - [ ] Confirm Password.
+ - [ ] Welcome.
+ - [ ] Delete Account.
 
 Prerequisites
 -------------
