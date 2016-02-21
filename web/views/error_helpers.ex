@@ -4,8 +4,6 @@ defmodule PhoenixStarter.ErrorHelpers do
   """
   use Phoenix.HTML
 
-  alias PhoenixStarter.Gettext
-
   @doc """
   Generates tag for inlined form input errors.
   """
@@ -27,10 +25,10 @@ defmodule PhoenixStarter.ErrorHelpers do
     #
     #     dngettext "errors", "1 file", "%{count} files", count
     #
-    Gettext.dngettext(Gettext, "errors", msg, msg, opts[:count], opts)
+    Gettext.dngettext(PhoenixStarter.Gettext, "errors", msg, msg, opts[:count], opts)
   end
 
   def translate_error(msg) do
-    Gettext.dgettext(Gettext, "errors", msg)
+    Gettext.dgettext(PhoenixStarter.Gettext, "errors", msg)
   end
 end
