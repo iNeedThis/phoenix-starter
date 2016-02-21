@@ -57,7 +57,6 @@
       <% :prod -> %>
         <%= render PhoenixStarter.SharedView, "tracking_prod.html" %>
       <% :stag -> %>
-        <%= render PhoenixStarter.SharedView, "tracking_stag.html" %>
       <% :dev -> %>
       <% :test -> %>
     <% end %>
