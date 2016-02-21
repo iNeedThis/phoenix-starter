@@ -20,15 +20,9 @@ My primary focus is on **simplicity** and **ease of use**. It will try to be as
 without being too specific. In the worst case you can use this as a learning guide for your projects,
 if for example you are only interested in **Sign in with Github** authentication and nothing else.
 
-<h4 align="center">Homepage</h4>
-
 ![](https://raw.githubusercontent.com/mjcloutier/mjcloutier.github.io/master/phoenix-starter-home.png)
 
-<h4 align="center">Login</h4>
-
 ![](https://raw.githubusercontent.com/mjcloutier/mjcloutier.github.io/master/phoenix-starter-login.png)
-
-<h4 align="center">Signup</h4>
 
 ![](https://raw.githubusercontent.com/mjcloutier/mjcloutier.github.io/master/phoenix-starter-signup.png)
 
