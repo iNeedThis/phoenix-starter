@@ -22,3 +22,5 @@ export DATABASE_URL=""
 export TEST_DB_USERNAME="postgres"
 export TEST_DB_PASSWORD="postgres"
 export TEST_DB_NAME="phoenix_starter_test"
+
+expot DATADOG_API_KEY=""
