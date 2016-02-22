@@ -271,6 +271,7 @@ List of Packages
 | ueberauth_google                | An Ueberauth strategy for Google authentication.                      |
 | ueberauth_facebook              | An Ueberauth strategy for Facebook authentication.                    |
 | ueberauth_twitter               | An Ueberauth strategy for Twitter authentication.                     |
+| ueberauth_fitbit                | An Ueberauth strategy for Fitbit authentication.                      |
 | comeonin                        | Password hashing (bcrypt, pbkdf2_sha512) library for Elixir.          |
 
 Useful Tools and Resources
