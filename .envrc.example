@@ -23,4 +23,5 @@ export TEST_DB_USERNAME="postgres"
 export TEST_DB_PASSWORD="postgres"
 export TEST_DB_NAME="phoenix_starter_test"
 
-expot DATADOG_API_KEY=""
+export HEROKU_APP_NAME="phoenixstarter"
+export DATADOG_API_KEY=""
