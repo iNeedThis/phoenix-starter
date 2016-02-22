@@ -71,7 +71,10 @@ defmodule PhoenixStarter.Mixfile do
       {:oauth, github: "tim/erlang-oauth"},
       {:comeonin, "~> 1.6"},
       {:cowboy, "~> 1.0"},
-      {:gettext, "~> 0.9"}
+      {:gettext, "~> 0.9"},
+      {:exometer_core, github: "PSPDFKit-labs/exometer_core", override: true},
+      {:exometer, github: "PSPDFKit-labs/exometer"},
+      {:edown, github: "uwiger/edown", tag: "0.7", override: true}
     ]
   end
 
