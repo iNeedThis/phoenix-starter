@@ -93,39 +93,59 @@
 .social-google {
   background-color: #da573b;
   border-color: #be5238;
-}
 
-.social-google:hover{
-  background-color: #be5238;
-  border-color: #9b4631;
+  &:hover{
+    background-color: #be5238;
+    border-color: #9b4631;
+  }
 }
 
 .social-twitter {
   background-color: #1daee3;
   border-color: #3997ba;
-}
 
-.social-twitter:hover {
-  background-color: #3997ba;
-  border-color: #347b95;
+  &:hover {
+    background-color: #3997ba;
+    border-color: #347b95;
+  }
 }
 
 .social-facebook {
   background-color: #4c699e;
   border-color: #47618d;
-}
 
-.social-facebook:hover {
-  background-color: #47618d;
-  border-color: #3c5173;
+  &:hover {
+    background-color: #47618d;
+    border-color: #3c5173;
+  }
 }
 
 .social-github {
   background-color: #4875B4;
   border-color: #466b99;
+
+  &:hover {
+    background-color: #466b99;
+    border-color: #3b5a7c;
+  }
 }
 
-.social-github:hover {
-  background-color: #466b99;
-  border-color: #3b5a7c;
-}
+//.social-slack {
+//  background-color: ;
+//  border-color: ;
+//
+//  &:hover {
+//    background-color: ;
+//    border-color: ;
+//  }
+//}
+//
+//.social-fitbit {
+//  background-color: ;
+//  border-color: ;
+//
+//  &:hover {
+//    background-color: ;
+//    border-color: ;
+//  }
+//}

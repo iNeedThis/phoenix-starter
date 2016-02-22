@@ -9,16 +9,20 @@
     </h2>
 
 		<small class="text-muted">Connect with a Social Network</small>
-		<br><br>
 
+    <br><br>
 
 		<p>
       <%= if not Enum.member?(@current_auths, "facebook") do %>
 			  <a class="btn btn-primary social-login-btn social-facebook" href="<%= auth_path(@conn, :login, "facebook") %>"><i class="fa fa-facebook"></i></a>
       <% end %>
 
-      <%= if not Enum.member?(@current_auths, "slack") do %>
-			  <a class="btn btn-primary social-login-btn social-slack" href="<%= auth_path(@conn, :login, "slack") %>"><i class="fa fa-slack"></i></a>
+      <%= if not Enum.member?(@current_auths, "twitter") do %>
+        <a class="btn btn-primary social-login-btn social-twitter" href="<%= auth_path(@conn, :login, "twitter") %>"><i class="fa fa-twitter"></i></a>
+      <% end %>
+
+      <%= if not Enum.member?(@current_auths, "google") do %>
+        <a class="btn btn-primary social-login-btn social-google" href="<%= auth_path(@conn, :login, "google") %>"><i class="fa fa-google-plus"></i></a>
       <% end %>
 		</p>
 
@@ -27,8 +31,12 @@
 			  <a class="btn btn-primary social-login-btn social-github" href="<%= auth_path(@conn, :login, "github") %>"><i class="fa fa-github-alt"></i></a>
       <%= end %>
 
-      <%= if not Enum.member?(@current_auths, "google") do %>
-			  <a class="btn btn-primary social-login-btn social-google" href="<%= auth_path(@conn, :login, "google") %>"><i class="fa fa-google-plus"></i></a>
+      <%= if not Enum.member?(@current_auths, "slack") do %>
+			  <a class="btn btn-primary social-login-btn social-slack" href="<%= auth_path(@conn, :login, "slack") %>"><i class="fa fa-slack"></i></a>
+      <% end %>
+
+      <%= if not Enum.member?(@current_auths, "fitbit") do %>
+        <a class="btn btn-primary social-login-btn social-fitbit" href="<%= auth_path(@conn, :login, "fitbit") %>"><i class="fa fa-heartbeat"></i></i></a>
       <% end %>
 		</p>
 

@@ -2,7 +2,7 @@ use Mix.Config
 
 alias Phoenix.PubSub.{PG2}
 alias PhoenixStarter.{Endpoint, PubSub, GuardianSerializer, Repo}
-alias Ueberauth.Strategy.{Github, Facebook, Google, Slack, Identity}
+alias Ueberauth.Strategy.{Github, Facebook, Google, Slack, Twitter, Fitbit, Identity}
 
 config :phoenix_starter, Endpoint,
   url:             [host: "localhost"],
@@ -44,6 +44,8 @@ config :ueberauth, Ueberauth,
     slack:    { Slack,    [default_scope: "users:read,identify"] },
     google:   { Google,   [] },
     facebook: { Facebook, [profile_fields: "email, name"] },
+    twitter:  { Twitter,  [] },
+    fitbit:   { Fitbit,   [default_scope: "profile"] },
     identity: { Identity, [callback_methods: ["POST"]] },
   ]
 
@@ -64,6 +66,10 @@ config :ueberauth, Facebook.OAuth,
   client_id:       System.get_env("FACEBOOK_CLIENT_ID"),
   client_secret:   System.get_env("FACEBOOK_CLIENT_SECRET"),
   redirect_uri:    "http://lvh.me:4000/auth/facebook/callback"
+
+config :ueberauth, Fitbit.OAuth,
+  consumer_key:    System.get_env("FITBIT_CLIENT_ID"),
+  consumer_secret: System.get_env("FITBIT_CLIENT_SECRET")
 
 config :guardian_db, GuardianDb, repo: Repo
 

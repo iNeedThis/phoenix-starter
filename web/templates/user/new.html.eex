@@ -9,11 +9,13 @@
 		<p>
 			<a class="btn btn-primary social-login-btn social-facebook" href="/auth/facebook"><i class="fa fa-facebook"></i></a>
 			<a class="btn btn-primary social-login-btn social-twitter" href="/auth/twitter"><i class="fa fa-twitter"></i></a>
+			<a class="btn btn-primary social-login-btn social-google" href="/auth/google"><i class="fa fa-google-plus"></i></a>
 		</p>
 
 		<p>
 			<a class="btn btn-primary social-login-btn social-github" href="/auth/github"><i class="fa fa-github-alt"></i></a>
-			<a class="btn btn-primary social-login-btn social-google" href="/auth/google"><i class="fa fa-google-plus"></i></a>
+			<a class="btn btn-primary social-login-btn social-slack" href="/auth/slack"><i class="fa fa-slack"></i></a>
+			<a class="btn btn-primary social-login-btn social-fitbit" href="/auth/fitbit"><i class="fa fa-heartbeat"></i></a>
 		</p>
 
     <small class="text-muted">or the retro way.</small>
