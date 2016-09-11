@@ -8,7 +8,9 @@
       <%= button "Logout", to: auth_path(@conn, :logout), method: "delete", class: "btn btn-sm btn-danger-outline" %>
     <% else %>
       <%= if @conn.request_path != auth_path(@conn, :login, "identity") do %>
-        <%= link "Login", to: auth_path(@conn, :login, "identity"), class: "btn btn-sm btn-primary-outline"%>
+        <%= link to: auth_path(@conn, :login, "identity"), class: "btn btn-sm btn-primary-outline" do %>
+          <i class="fa fa-user"></i> Login
+        <% end %>
       <% end %>
     <% end %>
   </div>
