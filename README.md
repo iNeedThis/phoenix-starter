@@ -52,7 +52,7 @@ Features
 
 - [x] **Local Authentication** using Email and Password.
 - [x] **OAuth 2.0 Authentication** via Facebook, Google, GitHub, Slack.
-- [ ] **OAuth 1.0a Authentication** via Twitter.
+- [x] **OAuth 1.0a Authentication** via Twitter.
 - [x] Flash notifications.
 - [x] MVC Project Structure.
 - [x] Sass stylesheets (auto-compiled via Brunch).
@@ -74,8 +74,8 @@ Features
   - [ ] Delete strategies linked to an account.
   - [ ] Delete Account.
 
-- [ ] **Admin Account Management**
-  - [ ] Manage Users.
+- [x] **Admin Account Management (via ExAdmin)**
+  - [x] Manage Users.
   - [ ] Manage Application Settings.
 
 - [ ] **Mailers**
@@ -124,10 +124,10 @@ cp .envrc.example .envrc
 mix deps.get && npm install
 
 # Create Database & migrate
-mix ecto.setup
+source .envrc mix ecto.setup
 
 # Run Project
-foreman s -f Procfile.dev
+./start
 ```
 
 Obtaining API Keys
@@ -271,6 +271,7 @@ List of Packages
 | ueberauth_twitter               | An Ueberauth strategy for Twitter authentication.                     |
 | ueberauth_fitbit                | An Ueberauth strategy for Fitbit authentication.                      |
 | comeonin                        | Password hashing (bcrypt, pbkdf2_sha512) library for Elixir.          |
+| ex_admin                        | ExAdmin is an auto administration package for the Phoenix Framework   |
 
 Useful Tools and Resources
 --------------------------
@@ -341,7 +342,7 @@ necessary environment variables in one location. I used an .envrc file that
 will need to be sourced each time you run the project in development and when
 testing
 ```
-$ source .env
+$ source .envrc
 $ mix text
 ```
 

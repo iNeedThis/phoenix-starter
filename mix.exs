@@ -52,6 +52,7 @@ defmodule PhoenixStarter.Mixfile do
 
   defp deps do
     [
+      {:ex_admin, github: "smpallen99/ex_admin"},
       {:ex_machina, "~> 1.0", only: [:dev, :test]},
       {:phoenix, "~> 1.1.4"},
       {:phoenix_ecto, "~> 3.0"},

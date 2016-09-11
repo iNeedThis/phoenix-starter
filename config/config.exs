@@ -23,6 +23,15 @@ config :phoenix, :generators,
   migration: true,
   binary_id: false
 
+config :ex_admin,
+  repo: PhoenixStarter.Repo,
+  module: PhoenixStarter,
+  modules: [
+    PhoenixStarter.ExAdmin.Dashboard,
+    PhoenixStarter.ExAdmin.User,
+    PhoenixStarter.ExAdmin.Authorization
+  ]
+
 config :guardian, Guardian,
   issuer:        "PhoenixStarter.#{Mix.env}",
   ttl:           {30, :days},
@@ -75,3 +84,6 @@ config :ueberauth, Fitbit.OAuth,
 config :guardian_db, GuardianDb, repo: Repo
 
 import_config "#{Mix.env}.exs"
+
+config :xain, :after_callback, {Phoenix.HTML, :raw}
+
