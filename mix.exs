@@ -5,7 +5,7 @@ defmodule PhoenixStarter.Mixfile do
     [
       app: :phoenix_starter,
       version: "0.0.1",
-      elixir: "~> 1.2",
+      elixir: "~> 1.3",
       elixirc_paths: elixirc_paths(Mix.env),
       compilers: [:phoenix, :gettext] ++ Mix.compilers,
       build_embedded: Mix.env == :prod,
@@ -52,29 +52,27 @@ defmodule PhoenixStarter.Mixfile do
 
   defp deps do
     [
-      {:ex_machina, "~>0.6", only: [:dev, :test]},
+      {:ex_machina, "~> 1.0", only: [:dev, :test]},
       {:phoenix, "~> 1.1.4"},
-      {:phoenix_ecto, "~> 2.0"},
+      {:phoenix_ecto, "~> 3.0"},
       {:postgrex, ">= 0.0.0", override: true},
-      {:phoenix_html, "~> 2.5"},
+      {:phoenix_html, "~> 2.6"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
-      {:guardian_db, "0.4.0"},
-      {:guardian, "0.9.0"},
+      {:guardian_db, "~> 0.4"},
+      {:guardian, "~> 0.12"},
       {:ueberauth, git: "https://github.com/ueberauth/ueberauth.git", override: true},
-      {:ueberauth_github, "~>0.2.0"},
-      {:ueberauth_identity, "~>0.2.1"},
-      {:ueberauth_slack, "~>0.2.0"},
-      {:ueberauth_google, "~> 0.2"},
-      {:ueberauth_facebook, "~> 0.3.2"},
+      {:ueberauth_github, "~> 0.2"},
+      {:ueberauth_identity, "~> 0.2"},
+      {:ueberauth_slack, "~> 0.3"},
+      {:ueberauth_google, "~> 0.3"},
+      {:ueberauth_facebook, "~> 0.4"},
       {:ueberauth_twitter, "~> 0.2"},
       {:ueberauth_fitbit, "~> 0.2"},
       {:oauth, github: "tim/erlang-oauth"},
-      {:comeonin, "~> 1.6"},
+      {:comeonin, "~> 2.5"},
       {:cowboy, "~> 1.0"},
-      {:gettext, "~> 0.9"},
-      {:exometer_core, github: "PSPDFKit-labs/exometer_core", override: true},
-      {:exometer, github: "PSPDFKit-labs/exometer"},
-      {:edown, github: "uwiger/edown", tag: "0.7", override: true}
+      {:gettext, "~> 0.11"},
+      {:edown, "~> 0.8"}
     ]
   end
 
