@@ -51,10 +51,9 @@ defmodule PhoenixStarter.ConnCase do
   end
 
   setup tags do
-    unless tags[:async] do
-      Ecto.Adapters.SQL.restart_test_transaction(PhoenixStarter.Repo, [])
-    end
-
-    :ok
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(PhoenixStarter.Repo)
+    status = unless tags[:async] do
+      Ecto.Adapters.SQL.Sandbox.mode(PhoenixStarter.Repo, {:shared, self()})
+    end || :ok
   end
 end

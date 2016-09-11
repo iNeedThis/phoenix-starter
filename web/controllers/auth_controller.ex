@@ -53,7 +53,7 @@ defmodule PhoenixStarter.AuthController do
 
   defp auths(nil), do: []
   defp auths(%PhoenixStarter.User{} = user) do
-    Ecto.Model.assoc(user, :authorizations)
+    Ecto.assoc(user, :authorizations)
       |> Repo.all
       |> Enum.map(&(&1.provider))
   end

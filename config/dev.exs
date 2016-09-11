@@ -3,7 +3,7 @@ use Mix.Config
 alias PhoenixStarter.{Endpoint, Repo}
 
 config :phoenix_starter, Endpoint,
-  http:                [port: 4000],
+  http:                [port: 3000],
   debug_errors:        true,
   code_reloader:       true,
   cache_static_lookup: false,

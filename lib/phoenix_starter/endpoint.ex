@@ -36,4 +36,6 @@ defmodule PhoenixStarter.Endpoint do
     signing_salt: "yFZE2pJR"
 
   plug PhoenixStarter.Router
+
+  def config, do: Application.get_env(:phoenix_starter, __MODULE__)
 end

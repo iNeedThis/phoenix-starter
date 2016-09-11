@@ -4,7 +4,7 @@ defmodule PhoenixStarter.UserControllerTest do
   import PhoenixStarter.Factory
 
   setup do
-    {:ok, %{user1: create(:user), user2: create(:user)}}
+    {:ok, %{user1: insert(:user), user2: insert(:user)}}
   end
 
   test "GET /admin/users without login" do

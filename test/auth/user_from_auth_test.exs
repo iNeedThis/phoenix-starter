@@ -46,7 +46,7 @@ defmodule PhoenixStarter.UserFromAuthTest do
   test "it returns the existing user when the authorization and user both exist", %{auth: auth} do
     {:ok, user} = User.registration_changeset(%User{}, %{email: @email, name: @name}) |> Repo.insert
     {:ok, _authorization} = Authorization.changeset(
-      Ecto.Model.build(user, :authorizations),
+      Ecto.build_assoc(user, :authorizations),
       %{
         provider: to_string(@provider),
         uid: @uid,
@@ -79,7 +79,7 @@ defmodule PhoenixStarter.UserFromAuthTest do
   test "it deletes the authorization and makes a new one when the old one is expired", %{auth: auth} do
     {:ok, user} = User.registration_changeset(%User{}, %{email: @email, name: @name}) |> Repo.insert
     {:ok, authorization} = Authorization.changeset(
-      Ecto.Model.build(user, :authorizations),
+      Ecto.build_assoc(user, :authorizations),
       %{
         provider: to_string(@provider),
         uid: @uid,
@@ -96,7 +96,7 @@ defmodule PhoenixStarter.UserFromAuthTest do
     assert user_from_auth.id == user.id
     assert before_users == user_count
     assert authorization_count == before_authorizations
-    auth2 = Repo.one(Ecto.Model.assoc(user, :authorizations))
+    auth2 = Repo.one(Ecto.assoc(user, :authorizations))
     refute auth2.id == authorization.id
   end
 
@@ -104,7 +104,7 @@ defmodule PhoenixStarter.UserFromAuthTest do
     {:ok, current_user} = User.registration_changeset(%User{}, %{email: "fred@example.com", name: @name}) |> Repo.insert
     {:ok, user} = User.registration_changeset(%User{}, %{email: @email, name: @name}) |> Repo.insert
     {:ok, _authorization} = Authorization.changeset(
-      Ecto.Model.build(user, :authorizations),
+      Ecto.build_assoc(user, :authorizations),
       %{
         provider: to_string(@provider),
         uid: @uid,
