@@ -372,6 +372,9 @@ deployments and custom domain support on free accounts.
 Changelog
 ---------
 
+### 0.0.2 (September 11, 2016)
+- Revive Project & Update dependencies.
+
 ### 0.0.1 (February 20, 2016)
 - Initial Commit of Project
 
