@@ -56,7 +56,7 @@ defmodule PhoenixStarter.UserFromAuth do
   end
 
   defp user_from_authorization(authorization, current_user, repo) do
-    case repo.one(Ecto.Model.assoc(authorization, :user)) do
+    case repo.one(Ecto.assoc(authorization, :user)) do
       nil -> {:error, :user_not_found}
       user ->
         if current_user && current_user.id != user.id do
@@ -78,7 +78,8 @@ defmodule PhoenixStarter.UserFromAuth do
   defp create_user(auth, repo) do
     name = name_from_auth(auth)
     result = User.registration_changeset(%User{}, scrub(%{email: auth.info.email, name: name}))
-    |> repo.insert
+      |> repo.insert
+
     case result do
       {:ok, user} -> user
       {:error, reason} -> repo.rollback(reason)
@@ -162,7 +163,7 @@ defmodule PhoenixStarter.UserFromAuth do
   end
 
   defp authorization_from_auth(user, auth, repo) do
-    authorization = Ecto.Model.build(user, :authorizations)
+    authorization = Ecto.build_assoc(user, :authorizations)
     result = Authorization.changeset(
       authorization,
       scrub(

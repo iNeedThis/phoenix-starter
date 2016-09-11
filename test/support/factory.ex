@@ -3,20 +3,20 @@ defmodule PhoenixStarter.Factory do
 
   alias PhoenixStarter.{User, Authorization, GuardianToken}
 
-  def factory(:user) do
+  def user_factory do
     %User{
       name: "Bob Belcher",
       email: sequence(:email, &"email-#{&1}@example.com"),
     }
   end
 
-  def factory(:guardian_token) do
+  def guardian_token_factory do
     %GuardianToken{
       jti: sequence(:jti, &"jti-#{&1}"),
     }
   end
 
-  def factory(:authorization) do
+  def authorization_factory do
     %Authorization{
       uid: sequence(:uid, &"uid-#{&1}"),
       user: build(:user),
@@ -27,6 +27,6 @@ defmodule PhoenixStarter.Factory do
 
   def with_authorization(user, opts \\ []) do
     opts = opts ++ [user: user, uid: user.email]
-    create(:authorization, opts)
+    insert(:authorization, opts)
   end
 end

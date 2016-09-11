@@ -6,7 +6,7 @@ defmodule PhoenixStarter.TokenControllerTest do
   alias PhoenixStarter.{Repo, GuardianToken}
 
   setup do
-    {:ok, %{user: create(:user)}}
+    {:ok, %{user: insert(:user)}}
   end
 
   test "GET /tokens without permission", %{ user: user } do
@@ -24,7 +24,7 @@ defmodule PhoenixStarter.TokenControllerTest do
   end
 
   test "DELETE /tokens/:jti with no login should fail" do
-    token = create(:guardian_token)
+    token = insert(:guardian_token)
     conn = conn()
     conn = delete conn, token_path(conn, :delete, token.jti)
 
@@ -33,7 +33,7 @@ defmodule PhoenixStarter.TokenControllerTest do
   end
 
   test "DELETE /tokens/:jti without revoke permission should fail", %{user: user} do
-    token = create(:guardian_token)
+    token = insert(:guardian_token)
     conn = guardian_login(user, :token)
       |> delete(token_path(conn, :delete, token.jti))
 
@@ -45,7 +45,7 @@ defmodule PhoenixStarter.TokenControllerTest do
   end
 
   test "DELETE /tokens/:jti without revoke permission should be cool", %{user: user} do
-    token = create(:guardian_token)
+    token = insert(:guardian_token)
     guardian_login(user, :token, perms: %{default: [:revoke_token]})
       |> delete(token_path(conn, :delete, token.jti))
 

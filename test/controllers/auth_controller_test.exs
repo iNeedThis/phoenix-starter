@@ -6,8 +6,8 @@ defmodule PhoenixStarter.AuthControllerTest do
   alias PhoenixStarter.{Repo, User, GuardianToken}
 
   setup do
-    user_auth = create(:user) |> with_authorization
-    admin_auth = create(:user) |> User.make_admin! |> with_authorization
+    user_auth = insert(:user) |> with_authorization
+    admin_auth = insert(:user) |> User.make_admin! |> with_authorization
 
     {:ok, %{
         user: user_auth.user,

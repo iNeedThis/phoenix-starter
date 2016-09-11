@@ -6,7 +6,7 @@ defmodule PhoenixStarter.SessionControllerTest do
   alias PhoenixStarter.User
 
   setup do
-    auth = create(:user)|> User.make_admin! |> with_authorization
+    auth = insert(:user)|> User.make_admin! |> with_authorization
     {:ok, %{user: auth.user}}
   end
 
