@@ -84,8 +84,6 @@ Features
   - [ ] Welcome.
   - [ ] Delete Account.
 
-- [ ] **Monitoring** with ExoMeter and DataDog
-
 
 Prerequisites
 -------------
