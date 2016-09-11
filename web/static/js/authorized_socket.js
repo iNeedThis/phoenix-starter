@@ -1,6 +1,6 @@
-import {Socket} from "deps/phoenix/web/static/js/phoenix";
+import {Socket} from "phoenix"
 
-const authSocket = new Socket("/socket");
+const authSocket = new Socket("/socket", {params: {token: window.userToken}})
 authSocket.connect();
 
 

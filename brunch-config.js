@@ -1,5 +1,4 @@
 exports.config = {
-  // See http://brunch.io/#documentation for docs.
   files: {
     javascripts: {
       joinTo: {
@@ -18,8 +17,9 @@ exports.config = {
       order: {
         after: ["web/static/css/app.css"],
         before: [
-          'web/static/css/app/layout.scss',
-          'web/static/css/app/typo.scss'
+          "node_modules/bootstrap/dist/css/bootstrap",
+          "web/static/css/app/layout",
+          "web/static/css/app/typo"
         ]
       }
     },
@@ -29,30 +29,20 @@ exports.config = {
   },
 
   conventions: {
-    // This option sets where we should place non-css and non-js assets in.
-    // By default, we set this to "/web/static/assets". Files in this directory
-    // will be copied to `paths.public`, which is "priv/static" by default.
     assets: /^(web\/static\/assets)/
   },
 
-  // Phoenix paths configuration
   paths: {
-    // Dependencies and current project directories to watch
     watched: [
-      "deps/phoenix/web/static",
-      "deps/phoenix_html/web/static",
       "web/static",
       "test/static"
     ],
 
-    // Where to compile files to
     public: "priv/static"
   },
 
-  // Configure your plugins
   plugins: {
     babel: {
-      // Do not use ES6 compiler in vendor code
       ignore: [/web\/static\/vendor/]
     }
   },
@@ -64,6 +54,11 @@ exports.config = {
   },
 
   npm: {
-    enabled: true
+    enabled: true,
+    globals: {
+      $: "jquery",
+      jQuery: "jquery",
+      bootstrap: "bootstrap"
+    }
   }
 };
