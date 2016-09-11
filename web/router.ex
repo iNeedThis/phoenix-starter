@@ -1,5 +1,6 @@
 defmodule PhoenixStarter.Router do
   use PhoenixStarter.Web, :router
+  use ExAdmin.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -93,5 +94,10 @@ defmodule PhoenixStarter.Router do
   # Other scopes may use custom stacks.
   scope "/api", PhoenixStarter do
     pipe_through [:api, :api_auth]
+  end
+
+  scope "/exadmin", ExAdmin do
+    pipe_through :browser
+    admin_routes
   end
 end
