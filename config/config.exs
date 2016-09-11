@@ -1,6 +1,5 @@
 use Mix.Config
 
-alias Phoenix.PubSub.{PG2}
 alias PhoenixStarter.{Endpoint, PubSub, GuardianSerializer, Repo}
 alias Ueberauth.Strategy.{Github, Facebook, Google, Slack, Twitter, Fitbit, Identity}
 
@@ -10,9 +9,11 @@ config :phoenix_starter, Endpoint,
   secret_key_base: "m6b9EGgoTxATviy/Ujx2stZC8UXkw2MMXACAXQR1btpZtV+FtQfl9kL7WoU5mvrD",
   render_errors:   [accepts: ~w(html json)],
   pubsub: [
-    name:    PubSub,
-    adapter: PG2
+    name:    PhoenixStarter.PubSub,
+    adapter: Phoenix.PubSub.PG2
   ]
+
+config :phoenix_starter, ecto_repos: [PhoenixStarter.Repo]
 
 config :logger, :console,
   format:   "$time $metadata[$level] $message\n",
