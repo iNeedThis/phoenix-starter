@@ -63,6 +63,10 @@ config :ueberauth, Github.OAuth,
   client_id:       System.get_env("GITHUB_CLIENT_ID"),
   client_secret:   System.get_env("GITHUB_CLIENT_SECRET")
 
+config :ueberauth, Ueberauth.Strategy.Twitter.OAuth,
+  consumer_key: System.get_env("TWITTER_CONSUMER_KEY"),
+  consumer_secret: System.get_env("TWITTER_CONSUMER_SECRET")
+
 config :ueberauth, Slack.OAuth,
   client_id:       System.get_env("SLACK_CLIENT_ID"),
   client_secret:   System.get_env("SLACK_CLIENT_SECRET")
@@ -86,4 +90,3 @@ config :guardian_db, GuardianDb, repo: Repo
 import_config "#{Mix.env}.exs"
 
 config :xain, :after_callback, {Phoenix.HTML, :raw}
-

@@ -4,6 +4,9 @@ export STAG_HOST="phoenixstarter-staging.herokuapp.com"
 export GITHUB_CLIENT_ID=""
 export GITHUB_CLIENT_SECRET=""
 
+export TWITTER_CONSUMER_KEY=""
+export TWITTER_CONSUMER_SECRET=""
+
 export SLACK_CLIENT_ID=""
 export SLACK_CLIENT_SECRET=""
 
