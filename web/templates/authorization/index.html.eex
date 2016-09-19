@@ -1,4 +1,4 @@
-<%= if @authorizations do %>
+<%= if @authorizations == [] do %>
   <p>No authorization found</p>
 <% else %>
   <table class='table table-hover'>
