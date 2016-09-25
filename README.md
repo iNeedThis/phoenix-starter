@@ -124,7 +124,7 @@ cp .envrc.example .envrc
 mix deps.get && npm install
 
 # Create Database & migrate
-source .envrc mix ecto.setup
+source .envrc && mix ecto.setup
 
 # Run Project
 ./start
