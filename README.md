@@ -15,9 +15,9 @@ A boilerplate for **Phoenix Framework** web applications. Inspired by [Sahat's H
 > authentication? You can spend hours on it if you are not familiar with how OAuth 2.0 works.
 - [Sahat](https://github.com/sahat)
 
-My primary focus is on **simplicity** and **ease of use**. It will try to be as
+My primary focus is on **simplicity** and **ease of use**. Another goal is to be as
 **generic** and **reusable** as possible to cover most use cases of starter web apps. A SaaS solution
-For a feature should be considered higher priority before writing your own solution (i.e. Cloudinary
+for a feature should be considered higher priority before writing your own solution (i.e. Cloudinary
 for Avatar Uploads). In the worst case you can use this as a learning guide for your projects,
 if for example you are only interested in **Sign in with Github** authentication and nothing else.
 
@@ -62,7 +62,7 @@ Features
 
 - [ ] **User Account Management**
   - [ ] Avatar Image Upload with (Gravatar/Identicon fallback).
-    - [ ] Uplaod Avatar via link or File Upload.
+    - [ ] Upload Avatar via link or File Upload.
     - [ ] Delete Avatar.
     - [ ] Edit Avatar.
   - [ ] Profile Details.
@@ -337,17 +337,17 @@ Instead of using /config/prod.secret.exs I have used:
 ```
 System.get_env("ENV_VARIABLE")
 ```
-throughout the project. In order to make the deploying simple and keep all
-necessary environment variables in one location. I used an .envrc file that
+Throughout the project, in order to make the deploying simple and keep all
+necessary environment variables in one location, I used an `.envrc` file that
 will need to be sourced each time you run the project in development and when
 testing
-```
+```bash
 $ source .envrc
 $ mix text
 ```
 
-**Note:** There is a Procfile.dev available in the root of the project. it will
-auto source your .envrc and run `mix phoenix.server` for you.
+**Note:** There is a `Procfile.dev` available in the root of the project. it will
+auto source your `.envrc` and run `mix phoenix.server` for you.
 
 Deployment
 ----------
