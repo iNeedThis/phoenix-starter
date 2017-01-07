@@ -343,7 +343,7 @@ will need to be sourced each time you run the project in development and when
 testing
 ```
 $ source .envrc
-$ mix text
+$ mix test
 ```
 
 **Note:** There is a Procfile.dev available in the root of the project. it will
