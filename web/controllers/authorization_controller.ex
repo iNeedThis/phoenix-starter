@@ -1,15 +1,12 @@
 defmodule PhoenixStarter.AuthorizationController do
   use PhoenixStarter.Web, :controller
-  use Guardian.Phoenix.Controller
-
-  alias Guardian.Plug.{EnsureAuthenticated}
-
-  alias PhoenixStarter.{Repo, Authorization}
 
   plug EnsureAuthenticated, handler: __MODULE__, typ: "token"
 
-  def index(conn, params, current_user, _claims) do
-    render conn, "index.html", current_user: current_user, authorizations: authorizations(current_user)
+  def index(conn, _params, current_user, _claims) do
+    render conn, "index.html",
+      current_user: current_user,
+      authorizations: authorizations(current_user)
   end
 
   defp authorizations(user) do

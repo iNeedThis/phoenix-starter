@@ -23,7 +23,7 @@ defmodule PhoenixStarter.UserFromAuth do
   end
 
   # All the other providers are oauth so should be good
-  defp validate_auth_for_registration(auth), do: :ok
+  defp validate_auth_for_registration(_auth), do: :ok
 
   defp register_user_from_auth(auth, current_user, repo) do
     case validate_auth_for_registration(auth) do
@@ -69,8 +69,8 @@ defmodule PhoenixStarter.UserFromAuth do
 
   defp create_user_from_auth(auth, current_user, repo) do
     user = current_user
-    if !user, do: user = repo.get_by(User, email: auth.info.email)
-    if !user, do: user = create_user(auth, repo)
+    || repo.get_by(User, email: auth.info.email)
+    || create_user(auth, repo)
     authorization_from_auth(user, auth, repo)
     {:ok, user}
   end
@@ -219,8 +219,8 @@ defmodule PhoenixStarter.UserFromAuth do
   # We don't have any nested structures in our params that we are using scrub with so this is a very simple scrub
   defp scrub(params) do
     result = Enum.filter(params, fn
-      {key, val} when is_binary(val) -> String.strip(val) != ""
-      {key, val} when is_nil(val) -> false
+      {_key, val} when is_binary(val) -> String.strip(val) != ""
+      {_key, val} when is_nil(val) -> false
       _ -> true
     end)
     |> Enum.into(%{})
