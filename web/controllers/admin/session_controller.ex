@@ -18,7 +18,7 @@ defmodule PhoenixStarter.Admin.SessionController do
   # We've aliased Guardian.Plug.EnsureAuthenticated in our PhoenixStarter.Web.admin_controller macro
   plug EnsureAuthenticated, [key: :admin, handler: __MODULE__] when action in [:delete, :impersonate, :stop_impersonating]
 
-  def new(conn, params, current_user, _claims) do
+  def new(conn, _params, current_user, _claims) do
     render conn, "new.html", current_user: current_user
   end
 
@@ -50,14 +50,14 @@ defmodule PhoenixStarter.Admin.SessionController do
     end
   end
 
-  def logout(conn, params, _current_user, _claims) do
+  def logout(conn, _params, _current_user, _claims) do
     conn
       |> Guardian.Plug.sign_out(:admin)
       |> put_flash(:info, "admin signed out")
       |> redirect(to: "/")
   end
 
-  def impersonate(conn, params, current_user, _claims) do
+  def impersonate(conn, params, _current_user, _claims) do
     user = Repo.get(User, params["user_id"])
     conn
     |> Guardian.Plug.sign_out(:default)
@@ -65,7 +65,7 @@ defmodule PhoenixStarter.Admin.SessionController do
     |> redirect(to: "/")
   end
 
-  def stop_impersonating(conn, params, current_user, _claims) do
+  def stop_impersonating(conn, _params, _current_user, _claims) do
     conn
     |> Guardian.Plug.sign_out(:default)
     |> redirect(to: admin_user_path(conn, :index))
